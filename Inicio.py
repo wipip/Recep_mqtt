@@ -87,7 +87,7 @@ with st.expander('ℹ️ Información', expanded=False):
 st.divider()
 
 # Botón para obtener datos
-if st.button('🔄 Obtener Datos del Sensor', use_container_width=True):
+if st.button('🔄 recibir datos del wokwi/arduino', use_container_width=True):
     with st.spinner('Conectando al broker y esperando datos...'):
         sensor_data = get_mqtt_message(broker, int(port), topic, client_id)
         st.session_state.sensor_data = sensor_data
